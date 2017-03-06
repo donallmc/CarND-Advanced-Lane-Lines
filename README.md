@@ -18,6 +18,8 @@ The goals / steps of this project are the following:
 [distorted_calibration]: ./images/undistorted_calibration/calibration01.jpg "distorted_calibration"
 [undistorted_calibration]: ./images/undistorted_calibration/calibration01.jpg_undistorted "undistorted_calibration"
 [highlighted]: ./images/highlighted.png "highlighted"
+[birdseye]: ./images/birdseye.png "birdseye"
+[final_result]: ./images/final_result.jpg "final_result"
 
 
 [video1]: ./annotated.mp4 "Video"
