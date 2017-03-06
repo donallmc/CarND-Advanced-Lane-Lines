@@ -21,10 +21,13 @@ class LineFinder:
             self.find_lines_close_to_prev_lines(img, out_img)
             if self.isLowQualityLinePair(previous_line_pair):
                 self.find_lines_with_histogram(img, out_img)
+                if self.lane_too_wide(500, 1000):
+                    self.line_pair = previous_line_pair
+                
 
         if previous_line_pair != None:
             self.smooth(previous_line_pair)
-                
+
         return self.line_pair
       
 
@@ -129,10 +132,10 @@ class LineFinder:
     def isLowQualityLinePair(self, previous_pair):
         return self.lane_too_wide() or self.line_pair_very_different(previous_pair)
                                                 
-    def lane_too_wide(self):
+    def lane_too_wide(self, min_width=700, max_width=850):
         lane_width1 = self.line_pair.right.xvalues[-1] - self.line_pair.left.xvalues[-1]
         lane_width2 = self.line_pair.right.xvalues[0] - self.line_pair.left.xvalues[0]        
-        return (lane_width1 > 850 or lane_width1 < 700) or (lane_width2 > 850 or lane_width2 < 700) 
+        return (lane_width1 > max_width or lane_width1 < min_width) or (lane_width2 > max_width or lane_width2 < min_width) 
 
     def line_pair_very_different(self, previous_pair):
         return previous_pair != None and (self.line_very_different(self.line_pair.left, previous_pair.left) or
