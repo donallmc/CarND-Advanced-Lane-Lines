@@ -2,7 +2,7 @@ import numpy as np
 
 class Line:
     YM_PER_PIX = 30/720 # meters per pixel in y dimension
-    XM_PER_PIX = 3.7/700 # meters per pixel in x dimension
+    XM_PER_PIX = 3.7/900 # meters per pixel in x dimension
 
     def __init__(self, polynomial, xvalues, yvalues, ploty):
         self.polynomial = polynomial
