@@ -17,6 +17,7 @@ The goals / steps of this project are the following:
 [distorted]: ./images/distorted.jpg "distorted"
 [distorted_calibration]: ./images/undistorted_calibration/calibration01.jpg "distorted_calibration"
 [undistorted_calibration]: ./images/undistorted_calibration/calibration01.jpg_undistorted "undistorted_calibration"
+[highlighted]: ./images/highlighted.png "highlighted"
 
 
 [video1]: ./annotated.mp4 "Video"
